@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell 04 - Rush - team prez</title>
+    <link rel="stylesheet" href="start.css">
+</head>
+
+<body>
+
+    <p><h1>La dream team</p>
+    
+    <button onclick="ouvrir_gp()">gllamosi</button>
+    <button onclick="ouvrir_jf()">jeschnei</button>
+
+    <script>
+        // Fonction pour ouvrir le fichier index.html dans le sous-dossier
+        function ouvrir_gp() {
+            window.location.href = 'gp/index.html';
+        }
+        function ouvrir_jf() {
+            window.location.href = 'jf/index.html';
+        }
+    </script>
+
+    <script>
+        // Fonction pour générer une couleur hexadécimale aléatoire
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    
+        // Fonction pour changer la couleur de fond toutes les secondes
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+    
+        // Changer la couleur toutes les xx seconde (xx ms)
+        setInterval(changeBackgroundColor, 1600);
+    </script>
+
+
+</body>
+</html>
